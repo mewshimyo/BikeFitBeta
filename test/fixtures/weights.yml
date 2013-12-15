@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  weight: 1.5
+  date: 2013-12-14
+
+two:
+  user_id: 1
+  weight: 1.5
+  date: 2013-12-14

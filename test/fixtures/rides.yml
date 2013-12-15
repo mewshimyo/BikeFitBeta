@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  date: 2013-12-14
+  distance: 1.5
+  time: 1
+  elevation: 1
+  strava_link: MyString
+  type: false
+
+two:
+  user_id: 1
+  date: 2013-12-14
+  distance: 1.5
+  time: 1
+  elevation: 1
+  strava_link: MyString
+  type: false
