@@ -1,5 +1,11 @@
 BikeFitBeta::Application.routes.draw do
 
+  get "weights/all"
+  get "weights/recent"
+  get "weights/show"
+  get "weights/new"
+  get "weights/edit"
+  get "weights/delete"
   get "rides/all"
   get "rides/recent"
   get "rides/show"
