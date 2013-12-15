@@ -1,5 +1,15 @@
 BikeFitBeta::Application.routes.draw do
 
+  get "rides/all"
+  get "rides/recent"
+  get "rides/show"
+  get "rides/new"
+  get "rides/edit"
+  get "rides/delete"
+  get "profile/edit"
+  get "profile/blank"
+  get "profile/view"
+  get "home/index"
   devise_for :users
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
