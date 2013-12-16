@@ -1,28 +1,5 @@
-== README
+BikeFitBeta is a small project designed around getting people out and moving.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I work in a bike shop, and this project was started because we have a need in my town for a program of this nature.  Many people here see bicyclists out on high-end road bikes, and don't make any sort of emotional connection to bikes a form of transportation or exercise.  The point of this is to get people out and moving by making the exercise portion of it as social and rewarding as possible.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+As it stands now, this is a relatively simple app -- user profiles, ride records, weight records, and achievements.  Other features will be added eventually (such as organization support, email marketing, etc).
