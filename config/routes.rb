@@ -12,6 +12,7 @@ BikeFitBeta::Application.routes.draw do
   get "rides/new"
   get "rides/edit"
   get "rides/delete"
+  post "rides/create" 
   get "profile/edit"
   get "profile/blank"
   get "profile/view"

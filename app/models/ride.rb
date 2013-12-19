@@ -11,16 +11,16 @@ class Ride < ActiveRecord::Base
 	#type (boolean) is false for road (default) and true for MTB
 	belongs_to :user
 
-	validates :user_id, numericality: { only_integer: true }
-	validates_with NotFuture #Ensure date is not in the future
-	validates_with DistanceOrTimePresent #Ensure either Distance or Time are present
-	validates :elevation, numericality :true
+	#validates :user_id, numericality: { only_integer: true }
+	#validates_with NotFuture #Ensure date is not in the future
+	#validates_with DistanceOrTimePresent #Ensure either Distance or Time are present
 end
 
 
 class NotFuture < ActiveModel::Validator #Validates entered date is not in the future
 	def validate(record)
 		#code goes here, yo!
+		return :true
 	end
 end
 
