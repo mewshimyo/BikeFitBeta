@@ -1,13 +1,15 @@
-<%= form_for @ride, url: {action: "create"} do |f| %>
-	<%= f.label "Date" %>
-	<%= f.date_field(:date) %>
-	<%= f.label "Distance" %>
-	<%= f.number_field(:distance, in: 0.0..250.0, step:0.1) %>
-	<%= f.label "Time (minutes)" %>
-	<%= f.number_field(:time, in: 0.0..900.0, step:1) %>
-	<%= f.label "Elevation" %>
-	<%= f.number_field(:elevation, in: 0..10000, step: 5) %>
-	<%= f.label "Strava Link" %>
-	<%= f.text_field :strava_link %>
-	<%= f.submit "Submit Ride" %>
+<div>
+	<%= form_for @ride, url: {action: "create"} do |f| %>
+		<%= f.label "Date" %>
+		<%= f.date_field(:date) %>
+		<%= f.label "Distance" %>
+		<%= f.number_field(:distance, in: 0.0..250.0, step:0.1) %>
+		<%= f.label "Time (minutes)" %>
+		<%= f.number_field(:time, in: 0.0..900.0, step:1) %>
+		<%= f.label "Elevation" %>
+		<%= f.number_field(:elevation, in: 0..10000, step: 5) %>
+		<%= f.label "Strava Link" %>
+		<%= f.text_field :strava_link %>
+		<%= f.submit "Submit Ride" %>
 	<% end %>
+</div>

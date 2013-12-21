@@ -1,2 +1,10 @@
-<h1>Profile#edit</h1>
-<p>Find me in app/views/profile/edit.html.erb</p>
+<div>
+	<%= form_for @profile, url: {action: "edit_do"} do |form| %>
+		<%= f.label "First Name" %>
+		<%= f.text_field :first_name %>
+		<%= f.label "Last Name" %>
+		<%= f.text_field :last_name %>
+		<%= f.label "Birthday" %>
+		<%= f.date_field :birthday %>
+		<%= f.submit "Submit" %>
+	<% end %>	
