@@ -22,9 +22,9 @@ class ProfileController < ApplicationController
   		  profile = Profile.new(profile_params)
   		profile.user_id = current_user.id
   		profile.save
-  		#update	
+  			
   	else
-
+#update
   	end
 
   	redirect_to action: 'view', :id => current_user.id
