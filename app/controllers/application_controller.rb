@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def must_be_signed_in
   	if !user_signed_in?
-  		# redirect_to('') TODO: find out how to redirect to the previous page
+  		redirect_to :back
   	end
   end
 

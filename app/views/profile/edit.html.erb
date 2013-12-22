@@ -1,5 +1,5 @@
 <div>
-	<%= form_for @profile, url: {action: "edit_do"} do |form| %>
+	<%= form_for @profile, url: {action: "edit_do"} do |f| %>
 		<%= f.label "First Name" %>
 		<%= f.text_field :first_name %>
 		<%= f.label "Last Name" %>
@@ -8,3 +8,4 @@
 		<%= f.date_field :birthday %>
 		<%= f.submit "Submit" %>
 	<% end %>	
+</div>
