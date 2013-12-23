@@ -8,7 +8,7 @@ BikeFitBeta::Application.routes.draw do
   get "weights/delete"
   get "rides/all"
   get "rides/recent"
-  get "rides/show"
+  get "rides/view"
   get "rides/new"
   get "rides/edit"
   get "rides/delete"

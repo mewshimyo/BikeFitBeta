@@ -1,11 +1,11 @@
 <div>
 	<%= form_for @profile, url: {action: "edit_do"} do |f| %>
 		<%= f.label "First Name" %>
-		<%= f.text_field :first_name %>
+		<%= f.text_field :first_name, :value => @firstname %>
 		<%= f.label "Last Name" %>
-		<%= f.text_field :last_name %>
+		<%= f.text_field :last_name, :value => @lastname %>
 		<%= f.label "Birthday" %>
-		<%= f.date_field :birthday %>
+		<%= f.date_field :birthday, :value => @birthday %>
 		<%= f.submit "Submit" %>
 	<% end %>	
 </div>

@@ -5,7 +5,7 @@ class RidesController < ApplicationController
   def recent
   end
 
-  def show
+  def view
   end
 
   def new
@@ -23,9 +23,9 @@ class RidesController < ApplicationController
     @ride.user_id = current_user.id
     @ride.save
 
-    @ride_id = Ride.last.id
+    @ride_id = Ride.last.id #This is a terrible, terrible way to do this.
 
-    #redirect tag to redirect to rides/show/ride_id
+    redirect_to action: 'view', :id => @ride_id
 
 
 
