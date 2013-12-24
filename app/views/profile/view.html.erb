@@ -1,1 +1,24 @@
-<h1><%= @firstname +" "+ @lastname %></h1>
+<h2><%= @firstname +" "+ @lastname %></h2>
+<h3>Rides</h3>
+<hr>
+<% if @UserRides.count != 0 %>
+	<% @UserRides.order('date DESC').limit(10).each do |ride| %>
+		<div class = "infobox">
+			<h4><%= ride.date %></h4>
+			<% if ride.distance != nil %>
+				<p class="label">Distance: <class = "info"><%= ride.distance %></p>
+			<% end %>
+			<% if ride.time != nil %>
+				<p class="label">Time: <class = "info"><%= ride.time %></p>
+			<% end %>
+			<% if ride.elevation != nil %>
+				<p class="label">Elevation Change: <class = "info"><%= ride.elevation %>
+			<% end %>
+			<% if ride.strava_link != nil %>
+				<% # link to strava page // TO BE IMPLEMENTED %>
+			<% end %>
+			<% if ride.type != nil %>
+				<% # ride types need implemented yet %>
+			<% end %>
+	<% end %>
+<% end %>
