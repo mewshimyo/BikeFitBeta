@@ -16,7 +16,7 @@ BikeFitBeta::Application.routes.draw do
   get "profile/edit"
   post "profile/edit_do"
   get "profile/blank"
-  get "profile/FUCKME"
+
   get "profile/:id", to: "profile#view"
   get "home/index"
   devise_for :users, :controllers => { :registrations => "registrations" }
