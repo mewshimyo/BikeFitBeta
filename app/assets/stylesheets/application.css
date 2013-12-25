@@ -11,3 +11,84 @@
  *= require_self
  *= require_tree .
  */
+body {
+	margin: 0px;
+	margin-top: -16px;
+	font-family: sans-serif;
+}
+div.header {
+	background-color: #999999;
+	height: auto;
+	min-height: 40px;
+	float: left;
+	width: 100%;
+	/*border-style: solid;
+	border-color: #555555; */
+
+}
+
+div.appname {
+	float:left;
+	height: 40px;
+	margin-left: 14px;
+}
+
+div.signin {
+	float: right;
+	height: 40px;
+	vertical-align: middle;
+	margin-right:14px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border-style: solid;
+	border-color: #555555;
+	border-top: none;
+	border-bottom: none;
+	border-radius: 22px;
+}
+
+div.signin:hover {
+	background-color: #DDDDDD;
+}
+
+div.navbar {
+	float:left;
+	height: auto;
+	background-color: #BBBBBB;
+	width: 100%;
+	padding-left: 14px;
+}
+
+div.navitem {
+	width: 120px;
+	float: left;
+}
+
+
+h1 {
+	font-family: sans-serif;
+	vertical-align: middle;
+	margin-top: 3px;
+}
+
+a.navigation {
+	color: #222222;
+	text-decoration: none;
+	width: 60px;
+}
+
+a.navitem {
+	text-decoration: none;
+	margin-right: 4px;
+	width: 80px;
+	color: #222222;
+}
+
+a.navitem:hover {
+	background-color: #999999;
+	color: #DDDDDD;
+}
+p.navigation {
+	vertical-align: middle;
+	margin-top: 10px;
+}
