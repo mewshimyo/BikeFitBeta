@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131215002125) do
+ActiveRecord::Schema.define(version: 20131225042606) do
 
   create_table "profiles", force: true do |t|
     t.integer  "user_id"
@@ -55,8 +55,8 @@ ActiveRecord::Schema.define(version: 20131215002125) do
 
   create_table "weights", force: true do |t|
     t.integer  "user_id"
-    t.float    "weight"
     t.date     "date"
+    t.float    "reading"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

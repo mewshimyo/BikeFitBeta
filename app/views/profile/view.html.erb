@@ -36,7 +36,7 @@
 		<% @UserWeight.order('date DESC').limit(4).each do |scale| %>
 			<div class ="infobox">
 				<h4><%= scale.date %></h4>
-				<p class = "label">Weight: <class = "info"><%= scale.weight %></p>
+				<p class = "label">Weight: <class = "info"><%= scale.reading %></p>
 			</div>
 		<% end %>
 
