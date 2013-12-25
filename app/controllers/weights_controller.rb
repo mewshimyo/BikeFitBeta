@@ -1,19 +1,17 @@
 class WeightsController < ApplicationController
-  def all
-  end
-
-  def recent
-  end
-
-  def show
+  def view
   end
 
   def new
+    @weight = Weight.new
+  end
+
+  def create
   end
 
   def edit
   end
 
-  def delete
+  def all
   end
 end

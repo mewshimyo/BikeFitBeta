@@ -1,24 +1,50 @@
 <h2><%= @firstname +" "+ @lastname %></h2>
-<h3>Rides</h3>
-<hr>
-<% if @UserRides.count != 0 %>
-	<% @UserRides.order('date DESC').limit(10).each do |ride| %>
-		<div class = "infobox">
-			<h4><%= ride.date %></h4>
-			<% if ride.distance != nil %>
-				<p class="label">Distance: <class = "info"><%= ride.distance %></p>
+<div class= "boxy">
+	<h3>Rides</h3>
+	<hr>
+	<% if !@UserRides.blank? %>
+		<% @UserRides.order('date DESC').limit(10).each do |ride| %>
+			<div class = "infobox">
+				<h4><%= ride.date %></h4>
+				<% if ride.distance != nil %>
+					<p class="label">Distance: <class = "info"><%= ride.distance %></p>
+				<% end %>
+				<% if ride.time != nil %>
+					<p class="label">Time: <class = "info"><%= ride.time %></p>
+				<% end %>
+				<% if ride.elevation != nil %>
+					<p class="label">Elevation Change: <class = "info"><%= ride.elevation %>
+				<% end %>
+				<% if ride.strava_link != nil %>
+					<% # link to strava page // TO BE IMPLEMENTED %>
+				<% end %>
+				<% if ride.type != nil %>
+					<% # ride types need implemented yet %>
+				<% end %>
+			</div>
 			<% end %>
-			<% if ride.time != nil %>
-				<p class="label">Time: <class = "info"><%= ride.time %></p>
-			<% end %>
-			<% if ride.elevation != nil %>
-				<p class="label">Elevation Change: <class = "info"><%= ride.elevation %>
-			<% end %>
-			<% if ride.strava_link != nil %>
-				<% # link to strava page // TO BE IMPLEMENTED %>
-			<% end %>
-			<% if ride.type != nil %>
-				<% # ride types need implemented yet %>
-			<% end %>
+		<% else %>
+			<div class="infobox">
+				<p class="message">Oops!  Someone needs to get out and ride! </p>
+			</div>
 	<% end %>
-<% end %>
+</div>
+<div class="boxy">
+	<h3>Weight</h3>
+	<hr>
+	<% if !@UserWeight.blank? %>
+		<% @UserWeight.order('date DESC').limit(4).each do |scale| %>
+			<div class ="infobox">
+				<h4><%= scale.date %></h4>
+				<p class = "label">Weight: <class = "info"><%= scale.weight %></p>
+			</div>
+		<% end %>
+
+	<% else %>
+		<div class="infobox">
+			<p class="message">Either they aren't entering their weight or they've hidden it from the public.</p>
+		</div>
+	<% end %>
+</div>
+
+

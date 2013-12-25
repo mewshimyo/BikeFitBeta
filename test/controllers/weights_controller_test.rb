@@ -1,18 +1,8 @@
 require 'test_helper'
 
 class WeightsControllerTest < ActionController::TestCase
-  test "should get all" do
-    get :all
-    assert_response :success
-  end
-
-  test "should get recent" do
-    get :recent
-    assert_response :success
-  end
-
-  test "should get show" do
-    get :show
+  test "should get view" do
+    get :view
     assert_response :success
   end
 
@@ -21,13 +11,18 @@ class WeightsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get create" do
+    get :create
+    assert_response :success
+  end
+
   test "should get edit" do
     get :edit
     assert_response :success
   end
 
-  test "should get delete" do
-    get :delete
+  test "should get all" do
+    get :all
     assert_response :success
   end
 

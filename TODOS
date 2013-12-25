@@ -1,9 +1,9 @@
 TODOS
 	Immediate
-		Create input forms for Profile, Ride, and Weight
+		Create input forms for Profile, Ride, and Weight -- DONE
 		Create pages to display all rides, all rides for a user, and a specific ride
 		Create pages to display weights for all users in a time frame and a specific user's weight record
-		Create way to edit Profile
+		Create way to edit Profile -- DONE
 		Create way to edit rides and weight
 		Create way to delete rides and weight
 		Build validations in models

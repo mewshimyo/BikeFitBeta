@@ -1,11 +1,13 @@
 BikeFitBeta::Application.routes.draw do
 
+  get "weights/view"
+  get "weights/create"
   get "weights/all"
   get "weights/recent"
-  get "weights/show"
   get "weights/new"
   get "weights/edit"
   get "weights/delete"
+  post "weights/create"
   get "rides/all"
   get "rides/recent"
   get "rides/view"
@@ -16,7 +18,6 @@ BikeFitBeta::Application.routes.draw do
   get "profile/edit"
   post "profile/edit_do"
   get "profile/blank"
-
   get "profile/:id", to: "profile#view"
   get "home/index"
   devise_for :users, :controllers => { :registrations => "registrations" }

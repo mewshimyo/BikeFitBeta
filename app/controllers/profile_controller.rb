@@ -13,6 +13,7 @@ class ProfileController < ApplicationController
   	@birthday = Profile.where(:user_id => params[:id]).last.birthday
 
   	@UserRides = Ride.where(:user_id => params[:id])
+  	@UserWeight = Weight.where(:user_id => params[:id])
   end
 
   def edit
