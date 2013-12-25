@@ -1,23 +1,9 @@
-TODOS
-	Immediate
-		Create input forms for Profile, Ride, and Weight -- DONE
-		Create pages to display all rides, all rides for a user, and a specific ride
-		Create pages to display weights for all users in a time frame and a specific user's weight record
-		Create way to edit Profile -- DONE
-		Create way to edit rides and weight
-		Create way to delete rides and weight
-		Build validations in models
-
-
-	Short-term
-		Pretty it up
-		E-mail for marketing and for updates
-
-	Long-term
-		Organizations
-
-
-
-	File-specific
-		application_controller.rb
-			Need to enable redirect to previous page
+Sanitize inputs
+Enforce requirements on inputs
+Make "profiles" page pretty
+Make "all rides" page pretty
+Make "all weights" page pretty
+Make inputs pages pretty
+Implement graphing for weights
+Implementing graphing for weekly rides
+Implement organizations
