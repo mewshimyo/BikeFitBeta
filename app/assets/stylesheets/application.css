@@ -80,13 +80,16 @@ a.navigation {
 a.navitem {
 	text-decoration: none;
 	margin-right: 4px;
-	width: 80px;
+	padding-left:12px;
+	padding-right:12px;
 	color: #222222;
 }
 
 a.navitem:hover {
 	background-color: #999999;
 	color: #DDDDDD;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 p.navigation {
 	vertical-align: middle;
