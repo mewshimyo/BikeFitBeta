@@ -46,3 +46,4 @@ end
 gem 'devise'
 
 gem 'pg'
+gem 'rails_12factor'

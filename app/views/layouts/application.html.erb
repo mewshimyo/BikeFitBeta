@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>BikeFitBeta</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -22,7 +22,7 @@
 
 	<div class="navbar">
 		<% if user_signed_in? %>
-
+			
 				<a class = "navitem" href="/profile/<%= current_user.id %>">My Profile</a>
 
 				<%= link_to "New Ride", {:controller => "rides", :action => "new"}, :class=>"navitem" %>
