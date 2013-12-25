@@ -22,14 +22,15 @@
 
 	<div class="navbar">
 		<% if user_signed_in? %>
-			
-				<a class = "navitem" href="/profile/<%= current_user.id %>">My Profile</a>
 
-				<%= link_to "New Ride", {:controller => "rides", :action => "new"}, :class=>"navitem" %>
+			<a class = "navitem" href="/profile/<%= current_user.id %>">My Profile</a>
 
-				<%= link_to "New Weight", {:controller => "weights", :action => "new"}, :class=>"navitem" %>
+			<%= link_to "New Ride", {:controller => "rides", :action => "new"}, :class=>"navitem" %>
 
+			<%= link_to "New Weight", {:controller => "weights", :action => "new"}, :class=>"navitem" %>
 		<% end %>
+			<%= link_to "All Rides", {:controller => "rides", :action => "all"}, :class=>"navitem" %>
+			<%= link_to "All Weights", {:controller => "weights", :action => "all"}, :class=>"navitem" %>
 
 	</div>	
 	<p class="notice"><%= notice %></p>
