@@ -1,7 +1,8 @@
 <h2><%= @firstname +" "+ @lastname %></h2> 
-<div class= "boxy"> 
-	<h3>Rides</h3>
-	<hr>
+	<div class="tab">
+		<h3>Rides</h3>
+	</div>
+	<div class= "boxy"> 
 	<% if !@UserRides.blank? %>
 		<% @UserRides.order('date DESC').limit(10).each do |ride| %>
 			<div class = "infobox">
@@ -28,10 +29,11 @@
 				<p class="message">Oops!  Someone needs to get out and ride! </p>
 			</div>
 	<% end %>
-</div>
-<div class="boxy">
-	<h3>Weight</h3>
-	<hr>
+	</div>
+	<div class="tab">
+		<h3>Weight</h3>
+	</div>
+	<div class="boxy">
 	<% if !@UserWeight.blank? %>
 		<% @UserWeight.order('date DESC').limit(4).each do |scale| %>
 			<div class ="infobox">

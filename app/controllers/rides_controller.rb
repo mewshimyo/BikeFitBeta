@@ -1,5 +1,5 @@
 class RidesController < ApplicationController
-  def all
+  def showall
   end
 
   def recent
