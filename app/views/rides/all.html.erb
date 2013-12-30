@@ -1,2 +1,25 @@
-<h1>Rides#all</h1>
-<p>Find me in app/views/rides/all.html.erb</p>
+<h2>All Rides</h2>
+<div class="boxy">
+	<% @rides.each do |ride| %>
+
+		<div class="infobox" id = "all">
+			<h4><%= Profile.where(:user_id => (ride.user_id)).take.first_name + " " + Profile.where(:user_id => (ride.user_id)).take.last_name %></h4>
+			<h4><%= ride.date %></h4>
+			<% if ride.distance != nil %>
+				<p class="label">Distance: <class = "info"><%= ride.distance %></p>
+			<% end %>
+			<% if ride.time != nil %>
+				<p class="label">Time: <class = "info"><%= ride.time %></p>
+			<% end %>
+			<% if ride.elevation != nil %>
+				<p class="label">Elevation Change: <class = "info"><%= ride.elevation %>
+			<% end %>
+			<% if ride.strava_link != nil %>
+				<% # link to strava page // TO BE IMPLEMENTED %>
+			<% end %>
+			<% if ride.type != nil %>
+				<% # ride types need implemented yet %>
+			<% end %>
+		</div>
+	<% end %>
+</div>

@@ -1,5 +1,6 @@
 class RidesController < ApplicationController
-  def showall
+  def all
+    @rides=Ride.order('date DESC').limit(25)
   end
 
   def recent
