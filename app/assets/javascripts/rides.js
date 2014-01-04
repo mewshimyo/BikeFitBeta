@@ -37,9 +37,11 @@ function checkDist() {
 
 function checkDate() {
 	if ($("#date").val() != "") {
+		$("#dateWarn").hide();
 		return true;
 	}
 	else {
+		$("#dateWarn").show();
 		return false;
 	}
 }
