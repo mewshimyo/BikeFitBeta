@@ -1,15 +1,17 @@
 <div>
 	<%= form_for @ride, url: {action: "create"} do |f| %>
-		<%= f.label "Date" %>
-		<%= f.date_field :date, :value => Date.today %>
-		<%= f.label "Distance" %>
-		<%= f.number_field(:distance, in: 0.0..250.0, step:0.1) %>
+		<%= f.label "Date" %>		<%= f.date_field :date, :value => Date.today, :id => "date", :class => "required" %><span id="dateWarn" class="info">Need a date!</span>
+</br>
+		<%= f.label "Distance (Miles)" %>
+		<%= f.number_field(:distance, in: 0.0..250.0, step:0.1, :id => "distance", :class => "required" ) %><span id="distWarn" class = "info">Need a date and/or a time</span></br>
 		<%= f.label "Time (minutes)" %>
-		<%= f.number_field(:time, in: 0.0..900.0, step:1) %>
+		<%= f.number_field(:time, in: 0.0..900.0, step:1, :id => "time", :class => "required") %>
+		<span id="hhmm" class="info"></span>
+		</br>
 		<%= f.label "Elevation" %>
-		<%= f.number_field(:elevation, in: 0..10000, step: 5) %>
+		<%= f.number_field(:elevation, in: 0..10000, step: 5, :id => "elevation") %></br>
 		<%= f.label "Strava Link" %>
-		<%= f.text_field :strava_link %>
-		<%= f.submit "Submit Ride" %>
+		<%= f.text_field :strava_link, :id => "stravaLink" %></br>
+		<%= f.submit "Submit Ride", :id => "submit" %>
 	<% end %>
 </div>

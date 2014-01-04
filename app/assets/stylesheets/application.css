@@ -147,3 +147,11 @@ div.infobox {
 div.infobox:hover {
 	background-color: #AAAAFF;
 }
+
+span.info {
+	margin-left: 0.5%;
+	padding-left: 6px;
+	padding-right: 6px;
+	background-color: #BBBBBB;
+	border-radius: 8px;
+}
