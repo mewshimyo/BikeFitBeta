@@ -37,22 +37,22 @@ function checkDist() {
 
 function checkDate() {
 	if ($("#date").val() != "") {
-		$("#dateWarn").hide();
+		$("#dateWarn").fadeOut();
 		return true;
 	}
 	else {
-		$("#dateWarn").show();
+		$("#dateWarn").fadeIn();
 		return false;
 	}
 }
 
 function checkReq() {
 	if (checkDist()||checkTime()) {
-		$("span#distWarn").hide();
+		$("span#distWarn").fadeOut();
 		return true;
 	}
 	else {
-		$("span#distWarn").show();
+		$("span#distWarn").fadeIn();
 		return false;
 	}
 }
@@ -62,7 +62,7 @@ $(document).ready(function() {
 	$("#date").val(today); // Set the default value of the box 
 	$("#time").on('change', function() { // converts minutes into HH:MM format
 		if (checkTime()) {
-			$("#hhmm").show();
+			$("#hhmm").fadeIn();
 			var baseMinutes = $(this).val();
 			var minutes = (baseMinutes%60);
 			var hours = (baseMinutes-minutes)/60;
@@ -74,9 +74,14 @@ $(document).ready(function() {
 	});
 
 	$("input.required").on('change', function() {
-		$("#submit").hide();
 		if (checkDate() && checkReq()) {
-			$("#submit").show();			
+			$("#submit").animate({'margin-left': "0px"}, {queue: false});
+			$("#submit").fadeIn();				
+		}
+		else {
+			$("#submit").animate({'margin-left': "88px"}, {queue: false});
+			$("#submit").fadeOut();
+
 		}
 
 	});

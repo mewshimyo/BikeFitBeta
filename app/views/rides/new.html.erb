@@ -1,9 +1,7 @@
-<div>
+<div class = "newride">
 	<%= form_for @ride, url: {action: "create"} do |f| %>
-		<%= f.label "Date" %>		<%= f.date_field :date, :value => Date.today, :id => "date", :class => "required" %><span id="dateWarn" class="info">Need a date!</span>
-</br>
-		<%= f.label "Distance (Miles)" %>
-		<%= f.number_field(:distance, in: 0.0..250.0, step:0.1, :id => "distance", :class => "required" ) %><span id="distWarn" class = "info">Need a date and/or a time</span></br>
+		<%= f.label "Date" %>		<%= f.date_field :date, :value => Date.today, :id => "date", :class => "required" %><span id="dateWarn" class="info">Need a date!</span></br> <%= f.label "Distance (Miles)" %>
+		<%= f.number_field(:distance, in: 0.0..250.0, step:0.1, :id => "distance", :class => "required" ) %><span id="distWarn" class = "info">Need a distance and/or a time</span></br>
 		<%= f.label "Time (minutes)" %>
 		<%= f.number_field(:time, in: 0.0..900.0, step:1, :id => "time", :class => "required") %>
 		<span id="hhmm" class="info"></span>
